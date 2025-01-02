@@ -16,19 +16,24 @@ const TicTacToe = () => {
     [2, 4, 6], // Diagonal
   ];
 
+  const checkWinner = (board: string[]) => {
+    for (const [a, b, c] of winningCombinations) {
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return board[a];
+      }
+    }
+  };
+
   const handleClick = (index: number) => {
     if (board[index] === "" && !winner) {
       const newBoard = [...board];
       newBoard[index] = currentPlayer;
       setBoard(newBoard);
-      setCurrentPlayer(currentPlayer === "x" ? "o" : "x");
-    }
-  };
-
-  const checkWinner = (board: string[]) => {
-    for (const [a, b, c] of winningCombinations) {
-      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-        return board[a];
+      const result = checkWinner(newBoard);
+      if (result) {
+        setWinner(result);
+      } else {
+        setCurrentPlayer(currentPlayer === "x" ? "o" : "x");
       }
     }
   };
