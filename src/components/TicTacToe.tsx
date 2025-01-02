@@ -11,7 +11,7 @@ const TicTacToe = () => {
     [6, 7, 8], // Row
     [0, 3, 6],
     [1, 4, 7],
-    [2, 5, 8], // Columng
+    [2, 5, 8], // Column
     [0, 4, 8],
     [2, 4, 6], // Diagonal
   ];
@@ -22,6 +22,14 @@ const TicTacToe = () => {
       newBoard[index] = currentPlayer;
       setBoard(newBoard);
       setCurrentPlayer(currentPlayer === "x" ? "o" : "x");
+    }
+  };
+
+  const checkWinner = (board: string[]) => {
+    for (const [a, b, c] of winningCombinations) {
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return board[a];
+      }
     }
   };
 
