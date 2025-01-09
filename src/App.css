@@ -125,3 +125,7 @@
   cursor: pointer;
   border-radius: 6px;
 }
+
+.draw {
+  background-color: #bcdbf9;
+}
