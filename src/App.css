@@ -1,0 +1,127 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #5a1e76;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 90px 100px 90px;
+  border-radius: 25px;
+  background: #2b0040;
+}
+
+.gameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resultsContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 6px;
+}
+
+.playerX {
+  background: #48d2fe;
+}
+
+.draw {
+  background: #bcdbf9;
+}
+
+.playerO {
+  background: #e2be00;
+}
+
+.player {
+  color: #000;
+  font-family: serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.score {
+  color: #000;
+
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #43115b;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.cellButton {
+  font-family: "Fredoka One", sans-serif;
+  background: transparent;
+  color: #fff;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+  border: none;
+}
+
+.cell:hover {
+  opacity: 0.7;
+}
+
+.cellX {
+  color: #48d2fe;
+}
+
+.cellO {
+  color: #e2be00;
+}
+
+.winning-cell {
+  color: #000;
+  background: lightgreen;
+}
+
+.newGame {
+  margin-top: 20px;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 6px;
+}
